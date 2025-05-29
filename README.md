@@ -102,7 +102,10 @@ These instructions are to install on a  Raspberry Pi with an OS like bookworm.
 ## Very basic description of the installation of a Raspberry Pi with an OS
 
 When you want to install on a new Raspberry Pi you may want to search the web for 'Raspberry Pi Imager' and use what you find to get a basic Raspberry Pi up and running.
-I use a 64 GB card and in the Imager I select the 64 bit version which has as many options as possible and I enable ssh access by password.
+<br>I use a 64 GB card and in the Imager I select the 64 bit version which has as many options as possible.
+<br>So I select: -- Raspberry Pi OS (other) -- Raspberry Pi OS Full (64-bit).
+<br>In the customisation settings I configure hostname, username pi and password and locale settings and skip the wireless LAN.
+<br>On the Services tab I enable ssh access with password authentication.
 
 After booting the installation and waiting some time you can use 'ssh pi@ip_address_of_your_Raspberry_Pi' to login and you may want to use 'sudo apt update' and 'sudo apt upgrade', change some settings with 'sudo raspi-config' like enable vnc, set root password etc.
 
@@ -166,12 +169,15 @@ We need to copy the application from the internet to the web server and make som
     - the file explains which values to change
   - edit the file Collection_Manager_Init.php
     - the file explains which values to change
-  - mkdir /Data/Music/Collections_Manager
+  - mkdir -p /Data/Music/Collections_Manager
     - use your path which may not be /Data/Music/Collections_Manager
   - chown www-data: /Data/Music/Collections_Manager
     - use your path and replace www-data with the userName you found
 
 Now you should be able to browse to ```http://ip_address_of_your_Raspberry_Pi/Collection_Manager/Collection_Manager.php``` and logon with user accounts you created in Authentication_Init.php.
+<br>When you do this on a computer browser zoom out to 50% and see all album folders which you have in /Data/Music.
+<br>When you have no album folders in /Data/Music you should place them there.
+<br>When you have album folders but do not see them you should give www-data read access some way. Maybe 'chmod o+r /Data/Music -R'
 <br>When you logon with an administrator account you should also be able to create your first empty collection.
 <br><i>You can not add titles to the collection yet.</i>
 <br>When you see an Error you need to correct access rights to the folders.
@@ -204,6 +210,14 @@ Collection_Manager.php uses Collection_Manager.py to start the Sonos Scan with t
 
 This module can not be installed just like that.
 
+Below you may get messages like :
+
+<br>locale: Cannot set LC_CTYPE to default locale: No such file or directory
+<br>locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+<br>locale: Cannot set LC_ALL to default locale: No such file or directory
+
+There is a locale fix for that which is further below.
+
 It needs a virtual python environment so:
 
   - sudo -i
@@ -221,6 +235,19 @@ The response should be "OK Updating on " and list your Sonos devices.
 
 Note that in the web tool only the members of $adminusers_2 in Authentication.php can start the Sonos Scan.
 
+#### locale fix
+
+To solve the issue with the locale messages fix it:
+
+  - enter the command 'locale' and see the messages
+  - sudo dpkg-reconfigure locales
+  - check the locales you want (select with space bar)
+  - I select en_US.UTF-8 UTF-8 and nl_NL.UTF-8 UTF-8
+  - Press Enter
+  - select the default, I selected en_US.UTF-8
+  - log out and on
+  - enter the command 'locale' and the messages should be gone
+
 ## That's all(most all)....
 
 That's all to get it up and running on your home network.
@@ -232,3 +259,4 @@ Another option which I use is a vpn by pivpn on my Raspberry Pi which encrypts a
 
 And that's all.
 <hr>
+
