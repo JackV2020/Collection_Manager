@@ -206,7 +206,7 @@ Now you should be able to use all functions to maintain collections.
 
 You can skip this when you do not have Sonos.
 
-<i>Below you may get messages like: </i>
+<i>Below you may get messages like:</i>
 
 locale: Cannot set LC_CTYPE to default locale: No such file or directory
 <br>locale: Cannot set LC_MESSAGES to default locale: No such file or directory
