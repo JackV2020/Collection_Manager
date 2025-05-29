@@ -163,7 +163,7 @@ We need to copy the application from the internet to the web server and make som
 
     Here you may use FileZilla or another tool to edit files.
     Maybe you use vnc to access you Raspberry Pi and use the geany editor, what you prefer.
-    Just :
+    Just:
     
   - edit the file Authentication_Init.php
     - the file explains which values to change
@@ -200,23 +200,23 @@ When it is not '/usr/lib/python3/dist-packages/eyed3' put the directory path you
 
 Now you should be able to use all functions to maintain collections.
 
-(Note that this also gives a command line tool with a capital D in it. To see the most important mp3 tags use : eyeD3 mp3-file)
+(Note that this also gives a command line tool with a capital D in it. To see the most important mp3 tags use: eyeD3 mp3-file)
 
 #### Enable Sonos Scan
 
 You can skip this when you do not have Sonos.
 
-Collection_Manager.php uses Collection_Manager.py to start the Sonos Scan with the soco module.
+<i>Below you may get messages like:</i>
 
-This module can not be installed just like that.
-
-Below you may get messages like :
-
-<br>locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
 <br>locale: Cannot set LC_MESSAGES to default locale: No such file or directory
 <br>locale: Cannot set LC_ALL to default locale: No such file or directory
 
-There is a locale fix for that which is further below.
+<i>Do not worry, there is a locale fix for that which is further below.</i>
+
+Collection_Manager.php uses Collection_Manager.py to start the Sonos Scan with the soco module.
+
+This module can not be installed just like that.
 
 It needs a virtual python environment so:
 
