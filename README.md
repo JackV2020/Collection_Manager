@@ -8,6 +8,20 @@ This project is licensed under the terms of the Unlicense.
 
 # Audio Collection Manager, Player and Sonos Scan
 
+#### Why this tool
+
+Before I explain, this tool is also useful when you do not have Sonos or samba.
+
+<br>Sonos gave us this new app in the beginning of 2024 and since then we are not able to create playlists of music in our samba shares.
+<br>I want to be able to create playlists for the kids, for Christmas and other reasons and had the next thought.
+<br>I know how to build albums, why not build a web based tool with which I can build new albums based on already existing albums. 
+<br>When I make sure that these new albums show up before the exisiting albums in my Sonos I have a mechanism which mimics playlists.
+<br>The name I use for these new albums is collections because they are morfe collections than playlists.
+
+This was the basic idea and on the way I created more than just a tool to click collections together.
+
+#### What does it give you
+
 With this web based tool you can:
 
   - build audio collections from your albums
@@ -104,10 +118,14 @@ These instructions are to install on a  Raspberry Pi with an OS like bookworm.
 When you want to install on a new Raspberry Pi you may want to search the web for 'Raspberry Pi Imager' and use what you find to get a basic Raspberry Pi up and running.
 <br>I use a 64 GB card and in the Imager I select the 64 bit version which has as many options as possible.
 <br>So I select: -- Raspberry Pi OS (other) -- Raspberry Pi OS Full (64-bit).
-<br>In the customisation settings I configure hostname, username pi and password and locale settings and skip the wireless LAN.
+<br>In the customisation settings I configure hostname, username pi and password and locale settings and skip the wireless LAN because I connect my Pi with a cable.
 <br>On the Services tab I enable ssh access with password authentication.
 
-After booting the installation and waiting some time you can use 'ssh pi@ip_address_of_your_Raspberry_Pi' to login and you may want to use 'sudo apt update' and 'sudo apt upgrade', change some settings with 'sudo raspi-config' like enable vnc, set root password etc.
+After booting the installation and waiting some time like a minute or so your pi should be connected to your network.
+
+To find the ip_address_of_your_Raspberry_Pi you may logon to your device that hands out ip addresses like your ISP router or use a free scanner tool like Fing which is available for Android.
+
+After finding the ip_address_of_your_Raspberry_Pi 'ssh pi@ip_address_of_your_Raspberry_Pi' to login and you may want to use 'sudo apt update' and 'sudo apt upgrade', change some settings with 'sudo raspi-config' like enable vnc, set root password etc.
 
 I prefer to connect by vnc and start a terminal window. After that I use 'sudo geany /etc/ssh/sshd_config' to enter 'PermitRootLogin yes' and 'UsePAM no'. I use 'sudo systemctl restart ssh' to activate this.
 
