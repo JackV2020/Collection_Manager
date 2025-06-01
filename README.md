@@ -14,9 +14,9 @@ Before I explain, this tool is also useful when you do not have Sonos or samba.
 
 <br>Sonos gave us this new app in the beginning of 2024 and since then we are not able to create playlists of music in our samba shares.
 <br>I want to be able to create playlists for the kids, for Christmas and other reasons and had the next thought.
-<br>I know how to build albums, why not build a web based tool with which I can build new albums based on already existing albums. 
-<br>When I make sure that these new albums show up before the exisiting albums in my Sonos I have a mechanism which mimics playlists.
-<br>The name I use for these new albums is collections because they are morfe collections than playlists.
+<br>I know how to build albums, why not build a web based tool with which I can build new albums based on already existing albums.
+<br>When I make sure that these new albums show up before the existing albums in my Sonos I have a mechanism which mimics playlists.
+<br>The name I use for these new albums is collections because they are more collections than playlists.
 
 This was the basic idea and on the way I created more than just a tool to click collections together.
 
@@ -26,7 +26,7 @@ With this web based tool you can:
 
   - build audio collections from your albums
     - an album is a (sub-)folder with audio files
-    - a collection is like a playlist but has own files in a seperate folder
+    - a collection is like a playlist but has own files in a separate folder
   - play your audio files, collections and albums
   - play these anywhere you want, PC, tablet, phone and via bluetooth on your car speakers
   - when you have Sonos:
@@ -55,7 +55,7 @@ With this web based tool you can:
 
 ## Audio folder tree and collections
 
-To explain about collections I assume you have a folder structure like '/Data/Music' with subfolder trees with at the deepest level folders with the audio files for the albums you have.
+To explain about collections I assume you have a folder structure like '/Data/Music' with sub folder trees with at the deepest level folders with the audio files for the albums you have.
 <br>Something like:
 
 ```
@@ -133,7 +133,7 @@ I prefer to connect by vnc and start a terminal window. After that I use 'sudo g
 
 A fixed IP address is also welcome and you can fix it with 'sudo nmtui-edit'. You may also make a reservation in the DHCP server of your router or pihole.
 
-## Install the apache webserver 
+## Install the apache webserver
 
 When you finished your basic things install the web server apache2.
 
@@ -164,7 +164,7 @@ Now you should be able to browse to  ```http://ip_address_of_your_Raspberry_Pi/i
 
 The installation is in some steps.
 
-Start a terminal with 'ssh pi@ip_address_of_your_Raspberry_Pi' 
+Start a terminal with 'ssh pi@ip_address_of_your_Raspberry_Pi'
 
 #### Get Collection_Manager.php up and running
 
@@ -277,4 +277,5 @@ Another option which I use is a vpn by pivpn on my Raspberry Pi which encrypts a
 
 And that's all.
 <hr>
+
 
