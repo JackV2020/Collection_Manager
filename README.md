@@ -12,13 +12,15 @@ This project is licensed under the terms of the Unlicense.
 
 Before I explain, this tool is also useful when you do not have Sonos or samba.
 
-<br>Sonos gave us this new app in the beginning of 2024 and since then we are not able to create playlists of music in our samba shares.
-<br>I want to be able to create playlists for the kids, for Christmas and other reasons and had the next thought.
+<br>Sonos gave us this new app in the beginning of 2024 and since then we were not able to create playlists of music in our samba shares.
+<br>I wanted to be able to create playlists for the kids, for Christmas and other reasons and had the next thought.
 <br>I know how to build albums, why not build a web based tool with which I can build new albums based on already existing albums.
 <br>When I make sure that these new albums show up before the existing albums in my Sonos I have a mechanism which mimics playlists.
 <br>The name I use for these new albums is collections because they are more collections than playlists.
 
 This was the basic idea and on the way I created more than just a tool to click collections together.
+
+Even now playlists are back again I am happy to use this tool because I can play my music now wherever I am.
 
 #### What does it give you
 
